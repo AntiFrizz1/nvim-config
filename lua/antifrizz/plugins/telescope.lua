@@ -1,6 +1,7 @@
 return {
   "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
+  -- need to use unstable version from master due stable 0.1.8 version don't work on neovim >= 0.11
+  -- branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },

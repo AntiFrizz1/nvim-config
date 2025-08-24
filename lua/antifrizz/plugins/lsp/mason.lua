@@ -52,6 +52,7 @@ return {
         "clang-format",
         "goimports",
         "vale",
+        "golangci-lint",
       },
       automatic_enable = true,
     })
