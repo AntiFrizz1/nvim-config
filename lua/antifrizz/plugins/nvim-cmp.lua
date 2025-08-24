@@ -45,16 +45,17 @@ return {
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({
-        { name = "nvim_lsp"}, -- language server
+        { name = "nvim_lsp" }, -- language server
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
+        { name = "orgmode" }, -- orgmode
       }),
 
       -- configure lspkind for vs-code like pictograms in completion menu
       formatting = {
         expandable_indicator = true,
-        fields = { 'abbr', 'kind', 'menu' },
+        fields = { "abbr", "kind", "menu" },
         format = lspkind.cmp_format({
           maxwidth = 50,
           ellipsis_char = "...",
