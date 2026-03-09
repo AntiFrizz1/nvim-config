@@ -37,3 +37,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- searching path
 opt.path = { ".", ",", "**" } -- "**" for recursive search in subdirs
+
+-- Spell checking (English + Russian)
+opt.spell = true
+opt.spelllang = "en_us,ru_ru"
