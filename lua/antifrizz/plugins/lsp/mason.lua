@@ -44,6 +44,8 @@ return {
         "cssls",
         "emmet_ls",
         "tailwindcss",
+        -- markdown
+        "marksman",
       },
       automatic_enable = true,
     })
@@ -59,6 +61,7 @@ return {
         "goimports",
         "vale",
         "golangci-lint",
+        "markdownlint-cli2",
         "vue-language-server", -- volar for Vue
         "eslint_d", -- fast eslint daemon for JS/TS/Vue
       },
