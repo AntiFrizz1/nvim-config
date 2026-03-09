@@ -42,7 +42,6 @@ return {
         "ts_ls",
         "html",
         "cssls",
-        "volar",
         "emmet_ls",
         "tailwindcss",
         -- markdown
@@ -63,6 +62,7 @@ return {
         "vale",
         "golangci-lint",
         "markdownlint-cli2",
+        "vue-language-server", -- volar for Vue
         "eslint_d", -- fast eslint daemon for JS/TS/Vue
       },
       automatic_enable = true,
