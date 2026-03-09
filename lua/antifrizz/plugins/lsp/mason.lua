@@ -45,6 +45,8 @@ return {
         "volar",
         "emmet_ls",
         "tailwindcss",
+        -- markdown
+        "marksman",
       },
       automatic_enable = true,
     })
@@ -60,6 +62,7 @@ return {
         "goimports",
         "vale",
         "golangci-lint",
+        "markdownlint-cli2",
         "eslint_d", -- fast eslint daemon for JS/TS/Vue
       },
       automatic_enable = true,

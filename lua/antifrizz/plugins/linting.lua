@@ -6,7 +6,7 @@ return {
 
     lint.linters_by_ft = {
       python = { "flake8" },
-      markdown = { "vale" },
+      markdown = { "vale", "markdownlint-cli2" },
       bash = { "bash" },
       cpp = { "clangtidy" },
       go = { "golangcilint" },
