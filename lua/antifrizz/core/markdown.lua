@@ -1,4 +1,24 @@
 -- Markdown-specific settings applied when entering a markdown buffer
+
+-- Auto-download missing spell files
+vim.api.nvim_create_autocmd("SpellFileMissing", {
+  callback = function(ev)
+    local lang = ev.match
+    local base = "https://raw.githubusercontent.com/me-vlad/spellfiles.vim/master/spell/"
+    local spell_dir = vim.fn.stdpath("data") .. "/site/spell/"
+    vim.fn.mkdir(spell_dir, "p")
+    for _, ext in ipairs({ ".spl", ".sug" }) do
+      local fname = lang .. ".utf-8" .. ext
+      local dest = spell_dir .. fname
+      if vim.fn.filereadable(dest) == 0 then
+        vim.notify("Downloading spell file: " .. fname, vim.log.levels.INFO)
+        vim.fn.system({ "curl", "-fsSL", base .. fname, "-o", dest })
+      end
+    end
+    vim.cmd("silent! set spelllang=" .. vim.o.spelllang)
+  end,
+})
+
 local augroup = vim.api.nvim_create_augroup("MarkdownSettings", { clear = true })
 
 vim.api.nvim_create_autocmd("FileType", {
