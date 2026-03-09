@@ -110,9 +110,19 @@ return {
       },
     })
 
-    -- TypeScript / JavaScript
+    -- TypeScript / JavaScript (with @vue/typescript-plugin for Vue support)
     vim.lsp.config("ts_ls", {
       capabilities = capabilities,
+      init_options = {
+        plugins = {
+          {
+            name = "@vue/typescript-plugin",
+            location = vim.fn.stdpath("data") .. "/mason/packages/vue-language-server/node_modules/@vue/typescript-plugin",
+            languages = { "vue" },
+          },
+        },
+      },
+      filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
     })
 
     -- HTML
@@ -125,8 +135,8 @@ return {
       capabilities = capabilities,
     })
 
-    -- Vue (Volar)
-    vim.lsp.config("volar", {
+    -- Vue (vue_ls / Volar 2.x)
+    vim.lsp.config("vue_ls", {
       capabilities = capabilities,
       filetypes = { "vue" },
     })
