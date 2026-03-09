@@ -41,6 +41,11 @@ return {
         "rust",
         "python",
         "go",
+        -- web development
+        "javascript",
+        "typescript",
+        "tsx",
+        "vue",
       },
       incremental_selection = {
         enable = true,

@@ -109,5 +109,57 @@ return {
         },
       },
     })
+
+    -- TypeScript / JavaScript
+    vim.lsp.config("ts_ls", {
+      capabilities = capabilities,
+    })
+
+    -- HTML
+    vim.lsp.config("html", {
+      capabilities = capabilities,
+    })
+
+    -- CSS / SCSS / Less
+    vim.lsp.config("cssls", {
+      capabilities = capabilities,
+    })
+
+    -- Vue (Volar)
+    vim.lsp.config("volar", {
+      capabilities = capabilities,
+      filetypes = { "vue" },
+    })
+
+    -- Emmet (HTML/CSS snippets)
+    vim.lsp.config("emmet_ls", {
+      capabilities = capabilities,
+      filetypes = {
+        "html",
+        "css",
+        "scss",
+        "less",
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact",
+        "vue",
+      },
+    })
+
+    -- Tailwind CSS
+    vim.lsp.config("tailwindcss", {
+      capabilities = capabilities,
+      filetypes = {
+        "html",
+        "css",
+        "scss",
+        "javascript",
+        "typescript",
+        "javascriptreact",
+        "typescriptreact",
+        "vue",
+      },
+    })
   end,
 }
