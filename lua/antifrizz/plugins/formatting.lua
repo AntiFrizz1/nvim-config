@@ -13,6 +13,18 @@ return {
         go = { "goimports", "gofmt" },
         c = { "clang-format" },
         cpp = { "clang-format" },
+        -- web development
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        vue = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
+        scss = { "prettier" },
+        less = { "prettier" },
+        json = { "prettier" },
+        jsonc = { "prettier" },
       },
       format_on_save = {
         lsp_fallback = true,

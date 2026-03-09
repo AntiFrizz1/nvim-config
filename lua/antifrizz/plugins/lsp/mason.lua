@@ -38,6 +38,13 @@ return {
         "dockerls",
         "docker_compose_language_service",
         "bashls",
+        -- web development
+        "ts_ls",
+        "html",
+        "cssls",
+        "volar",
+        "emmet_ls",
+        "tailwindcss",
       },
       automatic_enable = true,
     })
@@ -53,6 +60,7 @@ return {
         "goimports",
         "vale",
         "golangci-lint",
+        "eslint_d", -- fast eslint daemon for JS/TS/Vue
       },
       automatic_enable = true,
     })
