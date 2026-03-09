@@ -12,9 +12,9 @@ vim.api.nvim_create_autocmd("FileType", {
     opt.linebreak = true
     opt.breakindent = true
 
-    -- Spell checking (English)
+    -- Spell checking (English + Russian)
     opt.spell = true
-    opt.spelllang = "en_us"
+    opt.spelllang = "en_us,ru"
 
     -- Indentation: 2 spaces (GFM list continuation)
     opt.tabstop = 2
