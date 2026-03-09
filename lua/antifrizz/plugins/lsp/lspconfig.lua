@@ -161,5 +161,15 @@ return {
         "vue",
       },
     })
+
+    -- Clangd (C/C++)
+    vim.lsp.config("clangd", {
+      capabilities = capabilities,
+      cmd = {
+        "clangd",
+        "--clang-tidy",
+        "--query-driver=/usr/bin/c++*",
+      },
+    })
   end,
 }
