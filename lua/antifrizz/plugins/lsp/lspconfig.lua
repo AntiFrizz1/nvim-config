@@ -49,9 +49,7 @@ return {
         keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
         opts.desc = "Show buffer diagnostics"
-        keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
-
-        opts.desc = "Show line diagnostics"
+        keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file opts.desc = "Show line diagnostics"
         keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
         -- opts.desc = "Go to previous diagnostic"
@@ -117,7 +115,8 @@ return {
         plugins = {
           {
             name = "@vue/typescript-plugin",
-            location = vim.fn.stdpath("data") .. "/mason/packages/vue-language-server/node_modules/@vue/typescript-plugin",
+            location = vim.fn.stdpath("data")
+              .. "/mason/packages/vue-language-server/node_modules/@vue/typescript-plugin",
             languages = { "vue" },
           },
         },
@@ -176,10 +175,21 @@ return {
     vim.lsp.config("clangd", {
       capabilities = capabilities,
       cmd = {
-        "clangd",
+        "/usr/bin/clangd",
         "--clang-tidy",
         "--query-driver=/usr/bin/c++*",
       },
     })
+
+    -- Pyright
+    vim.lsp.config("pyright", {
+      capabilities = capabilities,
+    })
+
+    vim.lsp.config("neocmake", {
+      -- Some config
+      -- If none, just enable it
+    })
+    vim.lsp.enable("neocmake")
   end,
 }

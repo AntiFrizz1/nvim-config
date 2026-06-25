@@ -30,7 +30,6 @@ return {
         "lua_ls",
         "pyright",
         "clangd",
-        "cmake",
         "rust_analyzer",
         "gopls",
         "yamlls",
